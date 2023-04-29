@@ -10,6 +10,7 @@ public class PlatformerController : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundLayer;
     public float groundCheckRadius = 0.2f;
+    private float lastInputDirection;
 
     private Rigidbody2D rb;
     private float moveInput;
@@ -41,5 +42,30 @@ public class PlatformerController : MonoBehaviour
         {
             rb.velocity = Vector2.up * jumpForce;
         }
+
+        if (Mathf.Abs(moveInput) > 0.01f)
+        {
+            lastInputDirection = moveInput;
+            FlipSprite();
+        }
+    }
+
+    private void FlipSprite()
+    {
+        Debug.Log("FlipSprite");
+        Vector3 localScale = transform.localScale;
+
+        // If moving right, make sure the x scale is positive
+        if (lastInputDirection > 0)
+        {
+            localScale.x = -Mathf.Abs(localScale.x);
+        }
+        // If moving left, make sure the x scale is negative
+        else if (lastInputDirection < 0)
+        {
+            localScale.x = Mathf.Abs(localScale.x);
+        }
+
+        transform.localScale = localScale;
     }
 }

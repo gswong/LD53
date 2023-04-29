@@ -6,7 +6,7 @@ public class PickupObject : MonoBehaviour
     private bool isCarrying = false;
     private GameObject player;
     private Rigidbody2D playerRigidbody;
-    public float throwForceMultiplier = 1f;
+    public float throwForceMultiplier = 2f;
 
     private void Start()
     {
@@ -64,7 +64,7 @@ public class PickupObject : MonoBehaviour
 
         // Use the player's momentum as the throw force
         Rigidbody2D objectRigidbody = GetComponent<Rigidbody2D>();
-        Vector2 throwForce = playerRigidbody.velocity * throwForceMultiplier;
+        Vector2 throwForce = new Vector2(player.transform.localScale.x * -4f, 0f) + playerRigidbody.velocity * throwForceMultiplier;
         objectRigidbody.velocity = throwForce;
     }
 }

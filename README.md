@@ -7,15 +7,23 @@ The game is not meant to be replayable because once the secret is revealed the p
 
 ## Core Mechanics
 
-Package interaction: Pick up, put down, throw package. Package can also interact with world objects, like breaking pottery or knocking over NPCs.
+### Package interaction: Pick up, put down, throw package. Package can also interact with world objects, like breaking pottery or knocking over NPCs.
+### Player action telemetry: Use high instances of an action to indicate frustration from the player. For example, teabagging, package abuse, etc.
+### Achievement system: Hidden achievements are tied to positive or negative emotion and tallied up at the end of the game.
+#### Positive
+- Return stray balloon to kid
+- Pick up and throw away trash on the street
 
-Player action telemetry: Use high instances of an action to indicate frustration from the player. For example, teabagging, package abuse, etc.
+#### Negative Achievements
+- Teabagging
+- Damaged Package
+- Fail to deliver package
+- Damaged environment
+- Damaged NPCs
+- Breaking and entering homes
 
-Achievement system: Hidden achievements are tied to positive or negative emotion and tallied up at the end of the game.
-
-Puzzles and platforming: Present some challenging obstacles for the player to overcome.
-
-Global player stats: See how you rated against other players.
+### Puzzles and platforming: Present some challenging obstacles for the player to overcome.
+### Global player stats: See how you rated against other players.
 
 ## Art Style
 

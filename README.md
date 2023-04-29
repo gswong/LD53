@@ -22,6 +22,7 @@ The game is not meant to be replayable because once the secret is revealed the p
 - Damaged environment
 - Damaged NPCs
 - Breaking and entering homes
+- Fall damage
 
 ### Puzzles and platforming: Present some challenging obstacles for the player to overcome.
 ### Global player stats: See how you rated against other players.

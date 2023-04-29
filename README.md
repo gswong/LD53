@@ -7,7 +7,7 @@ The game is not meant to be replayable because once the secret is revealed the p
 
 ## Core Mechanics
 
-Package interaction: Pick up, put down, throw package. Package can also interact with world objeccts, like breaking pottery or knocking over NPCs.
+Package interaction: Pick up, put down, throw package. Package can also interact with world objects, like breaking pottery or knocking over NPCs.
 
 Player action telemetry: Use high instances of an action to indicate frustration from the player. For example, teabagging, package abuse, etc.
 

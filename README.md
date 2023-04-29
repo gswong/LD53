@@ -10,13 +10,14 @@ The game is not meant to be replayable because once the secret is revealed the p
 ### Package interaction: Pick up, put down, throw package. Package can also interact with world objects, like breaking pottery or knocking over NPCs.
 ### Player action telemetry: Use high instances of an action to indicate frustration from the player. For example, teabagging, package abuse, etc.
 ### Achievement system: Hidden achievements are tied to positive or negative emotion and tallied up at the end of the game.
-#### Positive
+#### Positive Achievements
 - Return stray balloon to kid
 - Pick up and throw away trash on the street
+- Allow stuck NPCs to traverse obstacle with your help
 
 #### Negative Achievements
-- Teabagging
-- Damaged Package
+- Teabagging NPCs
+- Damaging the Package
 - Fail to deliver package
 - Damaged environment
 - Damaged NPCs

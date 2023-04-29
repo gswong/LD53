@@ -1,7 +1,7 @@
 # Emotion Delivery Game Overview
 ## Concept
 
-Emotion Delivery is a side-scrolling platforming game where player navigates through obstacles to deliver a package to its destination. Set in a typical game world with the twist that certain actions lead to unlocking hidden achievements that can lead to positive or negative emotions. The achievements are hidden until the package is delivered. The audience/player is revealed to be the recipient of the package and the player's achievements are unpackaged and an overall emotion influences the mood of the win screen.
+Emotion Delivery is a side-scrolling platforming game where player navigates through obstacles to deliver a package to its destination. Set in a typical game world with the twist that certain actions lead to unlocking hidden achievements that score a positive or negative emotion. The achievements are hidden until the package is delivered. The audience/player is revealed to be the recipient of the package and the player's achievements are unpackaged and an overall emotion influences the mood of the win screen.
 
 The game is not meant to be replayable because once the secret is revealed the player knows to behave better next time. Meant to measure the ethical choices of the player.
 

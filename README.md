@@ -15,7 +15,7 @@ Achievement system: Hidden achievements are tied to positive or negative emotion
 
 Puzzles and platforming: Present some challenging obstacles for the player to overcome.
 
-Global player stats: See how you rated against other players
+Global player stats: See how you rated against other players.
 
 ## Art Style
 

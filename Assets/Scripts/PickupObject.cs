@@ -16,16 +16,14 @@ public class PickupObject : MonoBehaviour
 
     private void Update()
     {
-        if (isInRange && Input.GetKeyDown(KeyCode.E))
+        if (isCarrying && Input.GetKeyDown(KeyCode.E))
         {
-            if (!isCarrying)
-            {
-                PickUp();
-            }
-            else
-            {
-                Release();
-            }
+            Release();
+        }
+        else if (!isCarrying && isInRange && Input.GetKeyDown(KeyCode.E))
+        {
+            PickUp();
+
         }
     }
 

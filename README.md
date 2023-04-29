@@ -31,6 +31,7 @@ The game is not meant to be replayable because once the secret is revealed the p
 ## Art Style
 
 Mix of modern and classic 2D platformer art style. Obstacles should be more real world in nature. Player will be ambiguous delivery person.
+![Concept Art](concept-art.png)
 
 ## Audio
 

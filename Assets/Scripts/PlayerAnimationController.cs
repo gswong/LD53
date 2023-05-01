@@ -16,6 +16,7 @@ public class PlayerAnimationController : MonoBehaviour
     private Rigidbody2D rb;
     private float moveInput;
     private bool isGrounded;
+    private bool isJumpOnce = false;
 
     private void Start()
     {
@@ -25,7 +26,7 @@ public class PlayerAnimationController : MonoBehaviour
 
     private void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        isGrounded = (null != Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer));
         animator.SetBool("IsGrounded", isGrounded);
 
         // Check if the player pressed the Jump button and is on the ground
@@ -34,7 +35,20 @@ public class PlayerAnimationController : MonoBehaviour
         {
             animator.SetTrigger("TakeOff");
             rb.velocity = Vector2.up * jumpForce;
+            isJumpOnce = true;
         }
+
+        // Crouching
+        if (isGrounded == true && Input.GetButtonDown("Vertical") && Input.GetAxisRaw("Vertical") < 0)
+        {
+            animator.SetTrigger("Crouch");
+            animator.SetBool("IsCrouching", true);
+        } 
+        else if (Input.GetButtonUp("Vertical") && Input.GetAxisRaw("Vertical") == 0)
+        {
+            animator.SetBool("IsCrouching", false);
+        }
+
 
         // Play jump animation while player is in the air
         if (isGrounded == true)
@@ -62,9 +76,13 @@ public class PlayerAnimationController : MonoBehaviour
         }
 
         // better game gravity to feel more like mario game
-        if (rb.velocity.y < 0)
-        {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        if (isJumpOnce) {
+            if (rb.velocity.y < 0)
+            {
+                rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+            }
+
+            isJumpOnce = false;
         }
 
         // Apply horizontal velocity to the Rigidbody

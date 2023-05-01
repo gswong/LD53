@@ -18,12 +18,14 @@ public class PickupObject : MonoBehaviour
     {
         if (isCarrying && Input.GetKeyDown(KeyCode.E))
         {
+            player.GetComponent<Animator>().SetBool("IsPickup", false);
             Release();
         }
         else if (!isCarrying && isInRange && Input.GetKeyDown(KeyCode.E))
         {
+            player.GetComponent<Animator>().SetBool("IsPickup", true);
+            player.GetComponent<Animator>().SetTrigger("Pickup");
             PickUp();
-
         }
     }
 
@@ -48,7 +50,7 @@ public class PickupObject : MonoBehaviour
         Debug.Log("Pickup");
         isCarrying = true;
         transform.SetParent(player.transform);
-        Vector3 carryingPosition = new Vector3(player.transform.position.x, player.transform.position.y + 1, player.transform.position.z);
+        Vector3 carryingPosition = new Vector3(player.transform.position.x, player.transform.position.y + 2, player.transform.position.z);
         transform.position = carryingPosition;
         GetComponent<Collider2D>().enabled = false;
         GetComponent<Rigidbody2D>().simulated = false;

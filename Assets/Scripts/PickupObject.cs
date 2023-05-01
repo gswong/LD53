@@ -64,7 +64,7 @@ public class PickupObject : MonoBehaviour
 
         // Use the player's momentum as the throw force
         Rigidbody2D objectRigidbody = GetComponent<Rigidbody2D>();
-        Vector2 throwForce = new Vector2(player.transform.localScale.x * -4f, 0f) + playerRigidbody.velocity * throwForceMultiplier;
+        Vector2 throwForce = new Vector2(player.transform.localScale.x * 1f, 0f) + playerRigidbody.velocity * throwForceMultiplier;
         objectRigidbody.velocity = throwForce;
     }
 }
